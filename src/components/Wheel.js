@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import './wheel.css';
-const  Wheel=({items})=> {
-const [selectedItem,setSelectedItems]=useState(null);
+const  Wheel=({items,setSelectedItems,selectedItem})=> {
+
 
  function selectItem() {
-  setSelectedItems(-20)
+  setSelectedItems(null)
     if (selectedItem !== null) {
       const ChooseItem = Math.floor(Math.random() * items.length);
       console.log(ChooseItem);
@@ -39,9 +39,8 @@ const [selectedItem,setSelectedItems]=useState(null);
           
           ))}
           
-      {setTimeout(()=>{
-        console.log(items[selectedItem])
-      },3000)}
+     
+
         </div>
       </div>
       </div>
